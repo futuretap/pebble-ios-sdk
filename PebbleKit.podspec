@@ -12,10 +12,9 @@ Pod::Spec.new do |s|
   s.author       = { "Pebble Technology Corp." => "devsupport@getpebble.com" }
   s.source       = { :git => "https://github.com/pebble/pebble-ios-sdk.git", :tag => s.version }
   s.platform     = :ios, '6.0'
-  s.xcconfig     = { 'FRAMEWORK_SEARCH_PATHS' => '$(SRCROOT)/' }
-  s.preserve_paths = "PebbleKit.framework", "PebbleVendor.framework"
   s.vendored_frameworks = "PebbleKit.framework", "PebbleVendor.framework"
-  s.weak_frameworks = 'ExternalAccessory', 'CoreBluetooth', 'CoreMotion', 'MessageUI'
+  s.public_header_files = "*.framework/**/*.h"
+  s.frameworks = 'ExternalAccessory', 'CoreBluetooth', 'CoreMotion', 'MessageUI'
   s.libraries = 'z'
   s.requires_arc = true
 end
