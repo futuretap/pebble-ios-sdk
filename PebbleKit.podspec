@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 
   s.preserve_paths = "PebbleKit.framework", "PebbleVendor.framework"
   s.vendored_frameworks = "PebbleKit.framework", "PebbleVendor.framework"
-  s.public_header_files = "PebbleKit.framework/Versions/A/Headers/*.h"  # CocoaDocs doesn't follow symlinks
+  s.public_header_files = "PebbleKit.framework/Versions/A/Headers/*.h", "PebbleVendor.framework/Versions/A/Headers/*.h"  # CocoaDocs doesn't follow symlinks
   s.weak_frameworks = 'ExternalAccessory', 'CoreBluetooth', 'CoreMotion', 'MessageUI'
   s.libraries = 'z'
   s.requires_arc = true
